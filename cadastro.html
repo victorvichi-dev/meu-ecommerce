@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro & Checkout - ManChau Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Cabeçalho Padrão -->
+        <header class="top-header">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="logo manchau.svg" alt="Logotipo Oficial ManChau Gamer" width="50" height="50">
+                    <span class="logo-text">Man<span>Chau</span></span>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="index.html">Início</a>
+                <a href="produto.html">Produtos</a>
+                <a href="carrinho.html">Carrinho</a>
+                <a href="cadastro.html" class="active">Cadastro</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="carrinho.html" class="cart-btn" aria-label="Carrinho de Compras">
+                    🛒 <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Formulário de Cadastro e Checkout -->
+        <main class="checkout-page">
+            <h1 class="page-title">Finalizar Compra & Cadastro</h1>
+
+            <form action="#" method="post" class="checkout-form">
+                <!-- Bloco 1: Dados Pessoais -->
+                <fieldset class="form-fieldset">
+                    <legend>1. Dados Pessoais</legend>
+
+                    <div class="form-group">
+                        <label for="nome">Nome Completo: *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required class="form-input">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail: *</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">CPF: *</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone / WhatsApp: *</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nascimento">Data de Nascimento: *</label>
+                            <input type="date" id="nascimento" name="nascimento" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="senha">Senha de Acesso: *</label>
+                            <input type="password" id="senha" name="senha" minlength="6" placeholder="Mínimo 6 caracteres" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="avatar">Foto de Perfil (Opcional):</label>
+                            <input type="file" id="avatar" name="avatar" accept="image/*" class="form-file-input">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Bloco 2: Endereço de Entrega -->
+                <fieldset class="form-fieldset">
+                    <legend>2. Endereço de Entrega</legend>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cep">CEP: *</label>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" required class="form-input">
+                        </div>
+
+                        <div class="form-group flex-2">
+                            <label for="rua">Rua / Logradouro: *</label>
+                            <input type="text" id="rua" name="rua" placeholder="Avenida, Rua ou Alameda" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="numero">Número: *</label>
+                            <input type="text" id="numero" name="numero" placeholder="123" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="complemento">Complemento:</label>
+                            <input type="text" id="complemento" name="complemento" placeholder="Apto, Bloco, etc." class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bairro">Bairro: *</label>
+                            <input type="text" id="bairro" name="bairro" placeholder="Nome do bairro" required class="form-input">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group flex-2">
+                            <label for="cidade">Cidade: *</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Sua cidade" required class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">Estado: *</label>
+                            <select id="estado" name="estado" required class="form-select">
+                                <option value="">Selecione...</option>
+                                <option value="SP">São Paulo (SP)</option>
+                                <option value="RJ">Rio de Janeiro (RJ)</option>
+                                <option value="MG">Minas Gerais (MG)</option>
+                                <option value="PR">Paraná (PR)</option>
+                                <option value="RS">Rio Grande do Sul (RS)</option>
+                                <option value="SC">Santa Catarina (SC)</option>
+                                <option value="DF">Distrito Federal (DF)</option>
+                                <option value="BA">Bahia (BA)</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Bloco 3: Forma de Pagamento -->
+                <fieldset class="form-fieldset">
+                    <legend>3. Forma de Pagamento</legend>
+
+                    <div class="payment-options">
+                        <div class="payment-option">
+                            <input type="radio" id="pay-pix" name="pagamento" value="pix" required>
+                            <label for="pay-pix">
+                                <span class="payment-icon">⚡</span>
+                                <span class="payment-title">PIX (Aprovação Imediata - 5% OFF)</span>
+                            </label>
+                        </div>
+
+                        <div class="payment-option">
+                            <input type="radio" id="pay-card" name="pagamento" value="cartao">
+                            <label for="pay-card">
+                                <span class="payment-icon">💳</span>
+                                <span class="payment-title">Cartão de Crédito (em até 12x)</span>
+                            </label>
+                        </div>
+
+                        <div class="payment-option">
+                            <input type="radio" id="pay-boleto" name="pagamento" value="boleto">
+                            <label for="pay-boleto">
+                                <span class="payment-icon">📄</span>
+                                <span class="payment-title">Boleto Bancário</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Termos e Finalização -->
+                <div class="form-terms">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Declaro que li e aceito os <strong>Termos de Uso</strong> e as <strong>Políticas de Privacidade</strong> da loja. *</label>
+                </div>
+
+                <div class="form-submit">
+                    <button type="submit" class="btn-checkout">Concluir Cadastro e Pagar</button>
+                </div>
+            </form>
+        </main>
+
+        <!-- Rodapé Padrão -->
+        <footer class="main-footer">
+            <p>&copy; 2026 ManChau Gamer - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+

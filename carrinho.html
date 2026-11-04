@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras - ManChau Gamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Cabeçalho Padrão -->
+        <header class="top-header">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="logo manchau.svg" alt="Logotipo Oficial ManChau Gamer" width="50" height="50">
+                    <span class="logo-text">Man<span>Chau</span></span>
+                </a>
+            </div>
+
+            <nav class="nav-menu">
+                <a href="index.html">Início</a>
+                <a href="produto.html">Produtos</a>
+                <a href="carrinho.html" class="active">Carrinho</a>
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="carrinho.html" class="cart-btn" aria-label="Carrinho de Compras">
+                    🛒 <span class="cart-badge">3</span>
+                </a>
+            </div>
+        </header>
+
+        <!-- Conteúdo do Carrinho -->
+        <main class="cart-page">
+            <h1 class="page-title">Meu Carrinho de Compras</h1>
+
+            <div class="cart-layout">
+                <!-- Seção da Tabela de Itens -->
+                <section class="cart-table-container">
+                    <table class="cart-table">
+                        <caption>Itens Selecionados no Carrinho</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Produto</th>
+                                <th scope="col">Preço Unitário</th>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col">Subtotal</th>
+                                <th scope="col">Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Item 1 -->
+                            <tr>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?w=100&auto=format&fit=crop&q=80" alt="Teclado Mecânico RGB Switch Blue" class="cart-thumb" width="64" height="64">
+                                    <div class="item-meta">
+                                        <a href="produto.html" class="item-name">Teclado Mecânico RGB Switch Blue</a>
+                                        <span class="item-category">Periféricos</span>
+                                    </div>
+                                </td>
+                                <td class="price-cell">R$ 389,00</td>
+                                <td class="qty-cell">
+                                    <input type="number" min="1" value="1" class="qty-input" aria-label="Quantidade do Teclado Mecânico">
+                                </td>
+                                <td class="subtotal-cell">R$ 389,00</td>
+                                <td class="action-cell">
+                                    <button type="button" class="btn-remove" title="Remover item" aria-label="Remover Teclado Mecânico">🗑️</button>
+                                </td>
+                            </tr>
+
+                            <!-- Item 2 -->
+                            <tr>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=100&auto=format&fit=crop&q=80" alt="Mouse Gamer RGB 16000 DPI" class="cart-thumb" width="64" height="64">
+                                    <div class="item-meta">
+                                        <a href="produto.html" class="item-name">Mouse Gamer RGB 16000 DPI</a>
+                                        <span class="item-category">Periféricos</span>
+                                    </div>
+                                </td>
+                                <td class="price-cell">R$ 249,90</td>
+                                <td class="qty-cell">
+                                    <input type="number" min="1" value="1" class="qty-input" aria-label="Quantidade do Mouse Gamer">
+                                </td>
+                                <td class="subtotal-cell">R$ 249,90</td>
+                                <td class="action-cell">
+                                    <button type="button" class="btn-remove" title="Remover item" aria-label="Remover Mouse Gamer">🗑️</button>
+                                </td>
+                            </tr>
+
+                            <!-- Item 3 -->
+                            <tr>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=100&auto=format&fit=crop&q=80" alt="Headset Gamer 7.1 Surround" class="cart-thumb" width="64" height="64">
+                                    <div class="item-meta">
+                                        <a href="produto.html" class="item-name">Headset Gamer 7.1 Surround</a>
+                                        <span class="item-category">Áudio</span>
+                                    </div>
+                                </td>
+                                <td class="price-cell">R$ 329,90</td>
+                                <td class="qty-cell">
+                                    <input type="number" min="1" value="1" class="qty-input" aria-label="Quantidade do Headset Gamer">
+                                </td>
+                                <td class="subtotal-cell">R$ 329,90</td>
+                                <td class="action-cell">
+                                    <button type="button" class="btn-remove" title="Remover item" aria-label="Remover Headset Gamer">🗑️</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="5" class="tfoot-notice">
+                                    🎉 Parabéns! Você atingiu o valor mínimo e ganhou <strong>Frete Grátis</strong> para todo o Brasil!
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </section>
+
+                <!-- 2. Card Lateral de Resumo do Pedido -->
+                <aside class="order-summary">
+                    <h2 class="summary-title">Resumo do Pedido</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal (3 itens):</span>
+                        <span>R$ 968,80</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Frete:</span>
+                        <span class="free-shipping">GRÁTIS</span>
+                    </div>
+
+                    <div class="coupon-box">
+                        <label for="coupon-input">Cupom de Desconto:</label>
+                        <div class="coupon-field">
+                            <input type="text" id="coupon-input" placeholder="Ex: MANCHAU10" class="form-input">
+                            <button type="button" class="btn-coupon">Aplicar</button>
+                        </div>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total">
+                        <span>Valor Total:</span>
+                        <span class="total-amount">R$ 968,80</span>
+                    </div>
+
+                    <a href="cadastro.html" class="btn-checkout">Finalizar Compra &rarr;</a>
+                </aside>
+            </div>
+        </main>
+
+        <!-- Rodapé Padrão -->
+        <footer class="main-footer">
+            <p>&copy; 2026 ManChau Gamer - Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
+
